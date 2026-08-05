@@ -32,6 +32,26 @@
       margin: 0;
       font-size: 18px;
     }
+    /*右上のボタンを横に並べる*/
+    #toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    /*ARページを開くボタン*/
+    #ar-link {
+      padding: 10px 14px;
+      border-radius: 6px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    #ar-link:active {
+      transform: scale(0.96);
+    }
+    
     /*正面に戻すボタン*/
     #reset-button {
       padding: 10px 14px;
@@ -63,9 +83,15 @@
   <!--div=3D画面を入れるための箱, id="scene-container": その箱につけた名前, THREE: 読み込んだ機能全体につける名前-->
   <div id="toolbar">
     <h1>3Dモデルビューア</h1>
+    <div id="toolbar-actions">
+      <a id="ar-link" href="./ar.html">
+        ARで見る
+      </a>
+      
     <button id="reset-button">
       正面に戻す
     </button>
+    </div>
   </div>
 
   <div id="scene-container"></div>
